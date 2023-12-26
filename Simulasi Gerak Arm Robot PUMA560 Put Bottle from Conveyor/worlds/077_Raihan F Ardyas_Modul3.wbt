@@ -1,0 +1,40 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.3992906281162798 -0.14203073583537193 0.905756183736313 3.7935775098893734
+  position 2.409562609859004 2.1174166622650534 3.4774562165219973
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+}
+Puma560 {
+  translation 0.08 -0.08 0
+  controller "PUMAsensors"
+  bodySlot [
+    DistanceSensor {
+      translation -3.48951e-06 0.95 0.74
+      rotation 0 0 1 1.5708
+      name "IR"
+      type "infra-red"
+    }
+  ]
+  gripperSlot [
+    Robotiq3fGripper {
+      translation 0 1.8366e-07 0.25
+      rotation 0.5773509358554485 0.5773489358556708 0.5773509358554485 2.0944
+    }
+  ]
+}
+ConveyorBelt {
+  translation 0 0.97 0
+  rotation 0 0 1 3.14159
+  speed 0.1
+}
+WaterBottle {
+  translation 0.69 0.96 0.62
+}
